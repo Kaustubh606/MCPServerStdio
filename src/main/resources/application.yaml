@@ -1,3 +1,50 @@
+server:
+  port: 8082
+
 spring:
   application:
     name: mcpserverstdio
+  devtools:
+    restart:
+      enabled: false
+  ai:
+    mcp:
+      server:
+        enabled: true
+        stdio: true
+        name: mcp-server-stdio
+        version: 1.0.0
+        type: SYNC
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 30000
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+
+  main:
+    web-application-type: none
+    banner-mode: off
+
+logging:
+  console:
+    enabled: false
+
+  file:
+    name: ./logs/mcpserverstdio.log
+
+  level:
+    root: INFO
+    com.aiwork.mcpserverstdio: DEBUG
