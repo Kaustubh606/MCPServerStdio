@@ -1,6 +1,7 @@
 # MCPServerStdio
 
 # Spring AI MCP HelpDesk Server — STDIO
+### *** IMP NOTE: Original author of the concept and structure of the code is eazybytes, I have modified it as and when required for my study purpose of AI related concepts learning. ***
 
 A Spring Boot based **Model Context Protocol (MCP) Server** implemented using **Spring AI** and the **STDIO transport**.
 
